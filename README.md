@@ -1,21 +1,44 @@
-# {{ NAME OF TEXT }}
+# LGPSI Processing
 
-{{ describe what is being done, the process being followed, and who is involved in the work }}
-
-This text is being prepared as part of the [Greek Learner Texts Project](https://greek-learner-texts.org/).
+Private repo for processing LGPSI.
 
 ## Contributors
 
-* {{ list of people who have contributed to this repo }}
+* Seumas Macdonald
+* James Tauber
 
-## Source
+## Directory Layout
 
-{{ indicate original source(s) of text: scans or existing transcriptions }}
+So far, the only data directories being manually modified are:
 
-## Progress
+* `orig` (the original files from Seumas)
+* `manual-data` (data needed for processing, e.g. lemma overrides from Seumas)
 
-{{ indicate progress, or remove entire section if done }}
+The main output directories are:
+
+* `text` (the processed text in GLTP format)
+* `analysis` (further analysis of the text in GLTP format)
+
+Other directories are:
+
+* `cache` (for storing the Morpheus cache)
+* `config` (for storing configuration like for text-validation)
+* `scripts` (where all the code lives)
+
+## Scripts
+
+The scripts are run in this order:
+
+* `./scripts/orig-to-para.py` converts from `orig` files to `para` files under `text`
+* `./scripts/para-to-sent.py` converts those `para` files to sentence-based `sent` files
+* `./scripts/add-norm.py` produces the `norm` files in `analysis` from the `sent` files
+* `./scripts/lemmatise.py` produces the `lemma` files in `analysis` from the `norm` files using Morpheus and `manual-data/lemma_overrides.yaml`
+
+The folowing are modules not called from the command-line:
+
+* `morpheus.py` (Morphology API client)
+* `utils.py` (common functions shared between scripts)
 
 ## License
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+The content is CC-BY-SA and the code is MIT.
