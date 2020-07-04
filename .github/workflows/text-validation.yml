@@ -16,4 +16,5 @@ jobs:
     - name: Run text
       run: |
         pip install text-validator
-        validate-text text-validator.toml text/*.txt
+        validate-text config/text-validator-para.toml text/*.para.*.txt
+        validate-text config/text-validator-sent.toml text/*.sent.*.txt
