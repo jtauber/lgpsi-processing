@@ -53,7 +53,7 @@ for chapter_num in range(1, 20):
             norm = [f"{ref}.norm"]
             flags = [f"{ref}.flags"]
             for token in text:
-                norm_token, norm_flags = normalise(token.strip(",.;·«»()"))
+                norm_token, norm_flags = normalise(token.strip(",.;·«»()!"))
                 norm.append(norm_token)
                 flags.append(format_flags(norm_flags))
 
