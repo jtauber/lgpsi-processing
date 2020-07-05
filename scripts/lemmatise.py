@@ -34,10 +34,24 @@ with Morpheus("cache/morpheus.json") as morpheus:
                     ref = line.split(".norm")[0]
                     norm_list = line.strip().split()
                     lemma_list = [f"{ref}.lemma"]
+
                     for norm in line.split()[1:]:
+
+                        # see if we have an override
+
+                        lemma = None
+                        prefix = None
                         if norm in lemma_overrides:
-                            lemma = lemma_overrides[norm]["default"]
-                        else:
+                            lemma = lemma_overrides[norm].get("default")
+                            for k, v in lemma_overrides[norm].items():
+                                if k != "default" and ref.startswith(str(k)):
+                                    if prefix is None or len(str(k)) > len(prefix):
+                                        prefix = str(k)
+                                        lemma = v
+
+                        # otherwise check morpheus
+
+                        if lemma is None:
                             lemmas, cache_hit = morpheus.lookup(
                                 strip_length(norm), lang="grc", engine="morpheusgrc"
                             )
