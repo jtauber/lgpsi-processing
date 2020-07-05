@@ -1,6 +1,6 @@
 # LGPSI Processing
 
-Private repo for processing LGPSI.
+Repo for processing LGPSI. For official content, see [seumasjeltzz/LinguaeGraecaePerSeIllustrata](https://github.com/seumasjeltzz/LinguaeGraecaePerSeIllustrata).
 
 ## Contributors
 
