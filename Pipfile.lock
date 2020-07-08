@@ -40,11 +40,11 @@
         },
         "greek-normalisation": {
             "hashes": [
-                "sha256:03e202cfa2ea4ec1807fd187263901a9177c359c2e4de355414b94a2d6a30ec9",
-                "sha256:df5984916505eb827670afd64a468da942c84fbf3ac139b968622efa46346339"
+                "sha256:1414ac584a18a4b422813d80d68cdbf91fbed3118c4ce1d975e1cf0eb9476052",
+                "sha256:d4475c049c7fdef504cbecf803c146128ee8dab0ebd15c0c329f2eeca195a311"
             ],
             "index": "pypi",
-            "version": "==0.5"
+            "version": "==0.5.1"
         },
         "idna": {
             "hashes": [
