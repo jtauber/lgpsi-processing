@@ -338,6 +338,8 @@
   default: Μάρκος
 Οὐίβιος:
   default: Οὐίβιος
+Οὐίβιος:
+  default: Οὐίβιος
 Κοΐντος:
   default: Κοΐντος
 ὅ:
@@ -358,3 +360,34 @@
   "003": τίς
   "004": τίς
   "005": τίς
+
+"Α":
+  default: Α
+"B":
+  default: Β
+"Γ":
+  default: Γ
+"C":
+  default: C
+"D":
+  default: D
+"Δ":
+  default: Δ
+"πο-":
+  default: πο-
+"-τα-":
+  default: -τα-
+"-μος":
+  default: -μος
+Μαρ:
+  default: Μάρκος
+Γρη:
+  default: Γρηγόριος
+στ:
+  default: στ
+τύπ:
+  default: στ
+…:
+  default: …
+=:
+  default: =
