@@ -44,9 +44,12 @@ with Morpheus("cache/morpheus.json") as morpheus:
                         if norm in lemma_overrides:
                             lemma = lemma_overrides[norm].get("default")
                             for k, v in lemma_overrides[norm].items():
-                                if k != "default" and ref.startswith(str(k)):
-                                    if prefix is None or len(str(k)) > len(prefix):
-                                        prefix = str(k)
+                                if not isinstance(k, str):
+                                    print(f"*** {k} is not a string (under {norm})")
+                                    break
+                                if k != "default" and ref.startswith(k):
+                                    if prefix is None or len(k) > len(prefix):
+                                        prefix = k
                                         lemma = v
 
                         # otherwise check morpheus
