@@ -7,21 +7,21 @@
 Κωνσταντινούπολις:
   default: Κωνσταντινούπολις
 Ἑλλάς:
-    default: Ἑλλάς
+  default: Ἑλλάς
 ἐν:
-    default: ἐν
+  default: ἐν
 τῇ:
-    default: ὁ
+  default: ὁ
 Εὐρώπῃ:
-    default: Εὐρώπη
+  default: Εὐρώπη
 Συρίᾱ:
-    default: Συρία
+  default: Συρία
 Συρίᾳ:
   default: Συρία
 Ἀσίᾳ:
-    default: Ἀσία
+  default: Ἀσία
 Ἀραβίᾱ:
-    default: Ἀραβία
+  default: Ἀραβία
 Ἀραβίᾳ:
   default: Ἀραβία
 Ἆρα:
@@ -390,4 +390,4 @@
 …:
   default: …
 =:
-  default: =
+  default: "="
