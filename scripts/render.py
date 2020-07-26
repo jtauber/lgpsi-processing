@@ -172,6 +172,26 @@ for chapter_num in range(1, 20):
 
       print(f"<h1>Chapter {chapter_num} Report</h1>", file=g)
 
+      print(f"""
+        <table>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Lemma</th>
+            <th>Form</th>
+          </tr>
+          <tr>
+            <th>types</th>
+            <td>{data['new_lemma_types']} / {data['lemma_types']}</td>
+            <td>{data['new_form_types']} / {data['form_types']}</td>
+          </tr>
+          <tr>
+            <th>tokens</th>
+            <td>{data['new_lemma_tokens']} / {data['lemma_tokens']}</td>
+            <td>{data['new_form_tokens']} / {data['form_tokens']}</td>
+          </tr>
+        </table>
+      """, file=g)
+
       for lemma, lemma_data in data["lemmas"].items():
 
           print(f'<div class="lemma-entry">', file=g)
