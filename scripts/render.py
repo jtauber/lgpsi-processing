@@ -172,7 +172,7 @@ for chapter_num in range(1, 20):
 
       print(f"<h1>Chapter {chapter_num} Report</h1>", file=g)
 
-      for lemma, lemma_data in data.items():
+      for lemma, lemma_data in data["lemmas"].items():
 
           print(f'<div class="lemma-entry">', file=g)
           print(f'<h2>{lemma}</h2>', file=g)
