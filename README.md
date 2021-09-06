@@ -27,7 +27,7 @@ Other directories are:
 
 ## Scripts
 
-The scripts are run in this order:
+The scripts are run in this order (after dependencies in the Pipfile are installed):
 
 * `./scripts/orig-to-para.py` converts from `orig` files to `para` files under `text`
 * `./scripts/para-to-sent.py` converts those `para` files to sentence-based `sent` files
@@ -38,6 +38,10 @@ The folowing are modules not called from the command-line:
 
 * `morpheus.py` (Morphology API client)
 * `utils.py` (common functions shared between scripts)
+
+Other scripts include:
+
+* `sort-yaml.py <filename>` sorts the given yaml file with top-level keys in alphabetical order
 
 ## License
 

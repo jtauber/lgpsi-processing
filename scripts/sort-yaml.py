@@ -10,9 +10,15 @@ c = Collator()
 FILENAME = sys.argv[1]
 
 with open(FILENAME) as f:
-    data = dict(sorted(yaml.safe_load(f).items(), key=lambda x: c.sort_key(x[0]))).items()
+    # load yaml as dictionary items
+    data = yaml.safe_load(f).items()
 
-yaml.add_representer(type({}.items()), yaml.representer.SafeRepresenter.represent_dict)
+    # sort based on the keys using pyuca
+    data = sorted(data, key=lambda x: c.sort_key(x[0]))
+
+    # convert back to a dictionary
+    data = dict(data)
+
 
 with open(FILENAME, "w") as g:
-    yaml.dump(data, g, allow_unicode=True)
+    yaml.dump(data, g, sort_keys=False, allow_unicode=True)
